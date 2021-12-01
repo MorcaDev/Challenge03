@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --orange    : hsl(26, 100%, 55%);
+    --paleOrange: hsl(25, 100%, 94%);
+
+    --darkBlue  : hsl(220, 13%, 13%);
+    --lightBlue : hsl(219, 9%, 45%);
+    --grayBlue  : hsl(220, 14%, 75%);
+    --whiteBlue : hsl(223, 64%, 98%);
+    --white     : hsl(0, 0%, 100%);
+    --black     : hsl(0, 0%, 0%); /*with 75% opacity for lightbox background*/
+
+    --family    : 'Kumbh Sans', sans-serif;
+    --paragraph : 1.6rem;
+
+    --skinny    : 400;
+    --bold      : 700;
+}
+
+/*/////////////////////////
+/////////////////////////*/
+
+body{
+    width: 100%;
+    height: auto;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/*/////////////////////////
+/////////////////////////*/
+
+header{
+    width: 100%;
+    height: auto; /*then will be defined*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    align-items: center;
+}
+
+/*/////////////////////////
+/////////////////////////*/
+
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*/////////////////////////
+/////////////////////////*/
+
+.attribution { font-size: 1.3rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
