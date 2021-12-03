@@ -29,12 +29,12 @@ html{
 /*/////////////////////////
 /////////////////////////*/
 body{
-    position: relative;
     width: 100%;
     height: auto;
     min-width: 320px;
-    max-width: 1600px;
-    margin: 0 auto;
+    max-width: 1440px;
+    min-height: 350px;
+    margin: 0px auto;
     background-color: var(--whiteBlue);
     z-index: 0;
 }
@@ -43,6 +43,7 @@ body{
 /*/////////////////////////
 /////////////////////////*/
 header{ 
+    position: relative;
     width:  100%; 
     height: auto; 
 }
@@ -121,6 +122,95 @@ header nav{
             text-decoration: none;
             color: var(--darkBlue);
         }
+    .checkbox{
+        display: none;
+    }
+        .checkbox-title{
+            width: 100%;
+            height: auto;
+            padding: 20px 0px;
+            border-bottom: solid 1px var(--lightBlue);
+        }
+            .checkbox-title h3{
+                font-size: 1.2rem;
+                font-weight: var(--bold);
+            }
+        .checkbox-contain{
+            width: 100%;
+            height: 144px;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+            .contain-info{
+                width: 100%;
+                height: auto;
+                margin: 20px 0px;
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+            }
+                .info-image{
+                    width: 47px;
+                    height: 47px;
+                    display: block;
+                    border-radius: 5px;
+                }
+                .info-container{
+                    width: 180px;
+                    height: auto;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                }
+                    .info-container p{
+                        margin-left: 10px;
+                        font-size: 1.3rem;
+                        font-weight: var(--bold);
+                    }
+                    .container-row{
+                        display: flex;
+                        padding: 5px 10px;
+                        flex-flow: row wrap;
+                        align-items: center;
+                    }
+                        .container-row h3{
+                            font-size: 1.2rem;
+                            letter-spacing: 1px;
+                            font-weight: var(--bold)
+                        }
+                            .container-row h3{
+                                display: inline-block
+                            }
+                        .container-row h2{
+                            font-size: 1.5rem;
+                            font-weight: var(--bold);
+                            margin-left: 5px;
+                        }
+                .info-button{
+                    width: 14px;
+                    height: 17px;
+                    margin-left: 25px;
+                    display: block;
+                    border: none;
+                    background: url("./assets/icon-delete.svg") center no-repeat;
+                    background-size: 100% 100%;
+                }
+            .contain-button{
+                width: 100%;
+                height: auto;
+            }
+                .contain-button button{
+                    width: inherit;
+                    height: 48px;
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    border:none;
+                    border-radius: 10px;
+                    background-color: var(--orange);
+                    color: var(--paleOrange);
+                }
         
 
 /*/////////////////////////
@@ -309,7 +399,7 @@ main{
 footer{ 
     width: 100%; 
     height: auto; 
-    margin: 12px 0px;
+    padding: 12px 0px;
 }
     .attribution { 
         font-size: 1.05rem; text-align: center;  color: var(--darkBlue);    font-weight: var(--bold) 
@@ -345,4 +435,20 @@ footer{
 }
 .opacity-containers{
     opacity: 0.75;
+}
+.show-checkbox{
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 2.5%;
+    width: 95%;
+    max-width: 340px;
+    height: 220px;
+    padding: 0px 18px;
+    background-color: var(--whiteBlue);
+    border-radius: 8px;
+}
+.checkbox-contain-h3{
+    font-size: 1.2rem;
+    font-weight: var(--bold);
 }

@@ -1,5 +1,3 @@
-console.log(`Hi there`)
-
 let navMenu      = document.getElementById("nav-sections");
 let navLeft     = document.getElementById("nav-menu_brand");
 let navRight    = document.getElementById("nav-cart_user");
@@ -23,5 +21,53 @@ let burgerMenu = (ev) =>{
     
 }
 
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
 openMenu.addEventListener("click",burgerMenu)
 closeMenu.addEventListener("click",burgerMenu)
+
+let cartBox    = document.getElementById("checkbox");
+let cartButton  = document.getElementById("cart-open");
+
+let cartSquare = (ev) =>{
+
+    let cssShowMenu = "show-checkbox"
+    cartBox.classList.toggle(cssShowMenu)
+
+}
+
+cartButton.addEventListener("click",cartSquare)
+
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+let checkoutButton = document.getElementById("check-open");
+
+let warn = (ev) =>{
+    
+    swal("Good job!", "You clicked the button!", "success");
+}
+
+checkoutButton.addEventListener("click", warn)
+
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+let trashButton    = document.getElementById("delete-contain")
+let checkContain    = document.getElementById("checkbox-contain")
+
+
+let deleteCheckBoxContain = (ev) =>{
+
+    cartBox.removeChild(checkContain)
+
+}
+
+trashButton.addEventListener("click",deleteCheckBoxContain)
