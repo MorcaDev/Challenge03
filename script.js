@@ -48,13 +48,6 @@ cartButton.addEventListener("click",cartSquare)
 
 let checkoutButton = document.getElementById("check-open");
 
-let warn = (ev) =>{
-    
-    swal("Good job!", "You clicked the button!", "success");
-}
-
-checkoutButton.addEventListener("click", warn)
-
 
 //////////////////////////////////////////////
 //////////////////////////////////////////////
@@ -65,7 +58,17 @@ let checkContain    = document.getElementById("checkbox-contain")
 
 let deleteCheckBoxContain = (ev) =>{
 
-    cartBox.removeChild(checkContain)
+    swal({
+        title: "Are you sure?",
+        icon: "warning",
+        text : "",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) { cartBox.removeChild(checkContain) } 
+        else { }
+      });
 
 }
 
@@ -106,3 +109,19 @@ let modifyNumber = (ev) =>{
 
 moreButton.addEventListener("click",modifyNumber)
 lessButton.addEventListener("click", modifyNumber)
+
+
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+let buttonAdd  = document.getElementById("buttonAdd");
+
+let modifyCart = () =>{
+
+    swal("Good choose", "Thanks for your purchase", "success");
+    
+}
+
+buttonAdd.addEventListener("click", modifyCart)
