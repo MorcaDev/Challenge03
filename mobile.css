@@ -232,8 +232,6 @@ main{
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
-    background: url("./assets/image-product-1.jpg") center no-repeat;
-    background-size: 100% 100%;
 }
     .preview--leftB{
         width: 28px;
@@ -451,4 +449,20 @@ footer{
 .checkbox-contain-h3{
     font-size: 1.2rem;
     font-weight: var(--bold);
+}
+.main-preview1{
+    background: url("./assets/image-product-1.jpg") no-repeat center;
+    background-size: 100% 100%;   
+}
+.main-preview2{
+    background: url("./assets/image-product-2.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.main-preview3{
+    background: url("./assets/image-product-3.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.main-preview4{
+    background: url("./assets/image-product-4.jpg") no-repeat center;
+    background-size: 100% 100%;
 }

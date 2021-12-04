@@ -46,13 +46,6 @@ cartButton.addEventListener("click",cartSquare)
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 
-let checkoutButton = document.getElementById("check-open");
-
-
-//////////////////////////////////////////////
-//////////////////////////////////////////////
-//////////////////////////////////////////////
-
 let trashButton    = document.getElementById("delete-contain")
 let checkContain    = document.getElementById("checkbox-contain")
 
@@ -73,6 +66,95 @@ let deleteCheckBoxContain = (ev) =>{
 }
 
 trashButton.addEventListener("click",deleteCheckBoxContain)
+
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+let checkoutButton = document.getElementById("check-open");
+
+
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+let previewContainer        = document.getElementById("previewContainer") 
+let numberPreviewContainer   = 1;
+
+let buttonLeft      = document.getElementById("leftButton")
+let buttonRight     = document.getElementById("rightButton")
+
+let changeImage = (ev) =>{
+
+    let typeOfClick = ev.target.id
+
+    if (typeOfClick === "leftButton") {
+        
+        if(numberPreviewContainer === 1){
+            numberPreviewContainer = 4
+        }else{
+            numberPreviewContainer--
+        }
+
+        switch (numberPreviewContainer) {
+            case 1:
+                previewContainer.classList.replace("main-preview2","main-preview1")
+                break;
+    
+            case 2:
+                previewContainer.classList.replace("main-preview3","main-preview2")
+                break;
+    
+            case 3:
+                previewContainer.classList.replace("main-preview4","main-preview3")
+                break;
+    
+            case 4:
+                previewContainer.classList.replace("main-preview1","main-preview4")
+                break;
+    
+            default:
+                break;
+        }   
+
+    }else if(typeOfClick === "rightButton"){
+        
+        if(numberPreviewContainer === 4){
+            numberPreviewContainer = 1
+        }else{
+            numberPreviewContainer++
+        }
+        
+        switch (numberPreviewContainer) {
+            case 1:
+                previewContainer.classList.replace("main-preview4","main-preview1")
+                break;
+    
+            case 2:
+                previewContainer.classList.replace("main-preview1","main-preview2")
+                break;
+    
+            case 3:
+                previewContainer.classList.replace("main-preview2","main-preview3")
+                break;
+    
+            case 4:
+                previewContainer.classList.replace("main-preview3","main-preview4")
+                break;
+    
+            default:
+                break;
+        }   
+
+    }else{}
+
+}
+
+buttonLeft.addEventListener("click", changeImage)
+buttonRight.addEventListener("click", changeImage)
+
 
 
 //////////////////////////////////////////////
@@ -125,3 +207,4 @@ let modifyCart = () =>{
 }
 
 buttonAdd.addEventListener("click", modifyCart)
+
