@@ -63,7 +63,6 @@ checkoutButton.addEventListener("click", warn)
 let trashButton    = document.getElementById("delete-contain")
 let checkContain    = document.getElementById("checkbox-contain")
 
-
 let deleteCheckBoxContain = (ev) =>{
 
     cartBox.removeChild(checkContain)
@@ -71,3 +70,39 @@ let deleteCheckBoxContain = (ev) =>{
 }
 
 trashButton.addEventListener("click",deleteCheckBoxContain)
+
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+let moreButton  = document.getElementById("buttonMore")
+let lessButton  = document.getElementById("buttonLess")
+
+let numberBox   = document.getElementById("boxNumber")
+let numberOfNumberBox = numberBox.textContent
+
+let modifyNumber = (ev) =>{
+
+    let button = ev.target.id
+    let quantity = parseInt(numberOfNumberBox)
+
+    if (button === "buttonMore") 
+    {   
+        quantity++
+    }
+    else if (button === "buttonLess" && quantity !== 1)
+    {   
+        quantity-- 
+    }
+    else
+    { 
+        console.log('it is not valiable') 
+    }
+
+    numberBox.textContent = quantity
+    numberOfNumberBox = quantity
+}
+
+moreButton.addEventListener("click",modifyNumber)
+lessButton.addEventListener("click", modifyNumber)
