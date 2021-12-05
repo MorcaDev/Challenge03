@@ -1,3 +1,6 @@
+/*/////////////////////////
+      UNIVERSAL CLASSES
+/////////////////////////*/
 *{
     box-sizing: border-box;
     margin: 0px;
@@ -27,20 +30,27 @@ html{
 
 
 /*/////////////////////////
+            BODY
 /////////////////////////*/
 body{
+    position: relative;
+
     width: 100%;
-    height: auto;
+    height: 100%;
+
     min-width: 320px;
     max-width: 1200px;
-    min-height: 350px;
+    min-height: 647px;
+
     margin: 0px auto;
+
     background-color: var(--whiteBlue);
     z-index: 0;
 }
 
 
 /*/////////////////////////
+           HEADER
 /////////////////////////*/
 header{ 
     position: relative;
@@ -214,6 +224,7 @@ header nav{
         
 
 /*/////////////////////////
+            MAIN
 /////////////////////////*/
 main{
     width: 100%;
@@ -386,27 +397,20 @@ main{
 
 
 /*/////////////////////////
+        ATTIBUTION
 /////////////////////////*/
-footer{ 
-    width: 100%; 
-    height: auto; 
-    padding: 12px 0px;
-}
-    .attribution { 
-        font-size: 1.05rem; text-align: center;  color: var(--darkBlue);    font-weight: var(--bold) 
+.attribution { 
+        position: absolute;
+        left: calc(50% - 128px);
+        bottom: 2px;
+        font-size: 1rem; text-align: center;  color: var(--darkBlue);    font-weight: var(--bold) 
     }
     .attribution a { 
         text-align:center;
     }
 
-
-
-
-
-
-
-
 /*/////////////////////////
+        JS CLASSES
 /////////////////////////*/
 
 .show-nav-sections{
