@@ -1,54 +1,49 @@
-header nav{
-    width: 100%;
-    height: 62px;
-    padding: 12px 18px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content:space-between;
-    align-items: center;
+/*/////////////////////////
+           HEADER
+/////////////////////////*/
+header{ 
+    width:  100%; 
+    height: 85px; 
 }
-    .nav-menu_brand{
-        order: 10;
-    }
-        .menu_brand-open{
-            display: none;
-        }
-    .nav-cart_user{
-        order: 30;
-    }
-    .nav-sections{
+    header nav{
         position: relative;
-        top: none;
-        left: none;
-
-        width: auto;
+        width: 100%;
         height: 100%;
-        padding-left: 0px;
+        padding: 12px 18px;
         display: flex;
         flex-flow: row wrap;
+        justify-content:space-between;
         align-items: center;
-
-        order: 20;
-
-        background-color: rgba(0, 0, 0, 0);
-        box-shadow: none;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        z-index: none;
     }
-        .sections-close{
-            display: none;
-        }
-        .nav-sections p{
-            margin: 0px 12px;
-            font-size: 1.25rem;
-            font-weight: var(--bold);
-        }
-        .nav-sections a{
-            text-decoration: none;
-            color: var(--darkBlue);
-        }
+            .menu-open{
+                display: none;
+            }
+        .nav-sections{
+            position: relative;
+            top: none;
+            left: none;
 
+            width: auto;
+            height: 100%;
+            padding-left: 0px;
+            
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+
+            background-color: rgba(0, 0, 0, 0);
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            z-index: none;
+        }
+            .sections-close{
+                display: none;
+            }
+            .nav-sections p{
+                margin: 0px 12px;
+                font-size: 1.4rem;
+            }
 
 
 main{
