@@ -32,7 +32,7 @@ body{
     width: 100%;
     height: auto;
     min-width: 320px;
-    max-width: 1440px;
+    max-width: 1200px;
     min-height: 350px;
     margin: 0px auto;
     background-color: var(--whiteBlue);
@@ -255,6 +255,9 @@ main{
         border-radius: 50%;
         border: none;
     }
+.main-options{
+    display: none;
+}
 
 
 .main-information{
@@ -316,23 +319,22 @@ main{
         .price-oldPrice{ 
             width: auto; 
             height: auto; 
+            display: flex;
         }
             .price-oldPrice p{
                 padding: 2px 0px;
-                display: block;
                 font-size: 1.14rem;
                 font-weight: var(--bold);
                 text-decoration-line: line-through;
                 color: var(--grayBlue);
                 background-color: var(--whiteBlue);
-                border-radius: 6px;
             }
 
 
 .main-adding{
     width: 100%;
     height: auto;
-    margin: 25px 0px;
+    margin: 25px auto;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -380,15 +382,6 @@ main{
             border: none;
             border-radius: 10px;
             background-color: var(--orange);
-        }
-        .adding-add button span{
-            width: 15px ;
-            height: 15px;
-            margin-right: 12px;
-            display: inline-block;
-            vertical-align:sub;
-            background: url("./assets/icon-cart.svg") center no-repeat;
-            background-size: 100% 100%;
         }
 
 
