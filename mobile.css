@@ -19,7 +19,7 @@ html{
     --grayBlue  : hsl(220, 14%, 75%);
     --whiteBlue : hsl(223, 64%, 98%);
     --white     : hsl(0, 0%, 100%);
-    --black     : hsl(0, 0%, 0%); /*with 75% opacity for lightbox background*/
+    --black     : hsl(0, 0%, 0%); 
 
     --family    : 'Kumbh Sans', sans-serif;
     --paragraph : 1.15rem;

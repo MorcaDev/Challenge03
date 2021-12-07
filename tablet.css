@@ -40,9 +40,10 @@
             .main-description h2{
                 margin-top: 12px;
                 margin-bottom: 20px;
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             .main-description p{
+                font-size: 1.3rem;
                 margin-bottom: 24px;
                 line-height: 2rem;
             }
