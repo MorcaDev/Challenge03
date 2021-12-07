@@ -205,3 +205,24 @@ let modifyCart = () =>{
 
 buttonAdd.addEventListener("click", modifyCart)
 
+/*
+
+<div class="contain-info">
+    <img class="info-image" src="./assets/image-product-1-thumbnail.jpg" alt="snickers which you bough"/>
+    
+    <div class="info-container">
+        <p>Autumn Limited Edition...</p>
+
+        <div class="container-row">
+            <h3>$125.00 x <span id="quantityJS">3</span></h3>
+            <h2 id="priceJS">$375.00</h2>
+        </div>   
+    </div>
+    
+    <button id="delete-contain" class="info-button" alt="to delete your purchase form the cart"></button>
+</div>
+<div class="contain-button">
+    <button id="check-open">Checkout</button>
+</div>
+
+*/
