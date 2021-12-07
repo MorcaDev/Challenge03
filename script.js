@@ -1,3 +1,7 @@
+//////////////////////////////////////////////
+/*               BURGER MENU                */
+//////////////////////////////////////////////
+
 let navMenu      = document.getElementById("nav-sections");
 let navLeft     = document.getElementById("nav-menu_brand");
 let navRight    = document.getElementById("nav-cart_user");
@@ -20,7 +24,7 @@ let burgerMenu = (ev) =>{
 
 
 //////////////////////////////////////////////
-//////////////////////////////////////////////
+/*              CHECKBOX OPEN               */
 //////////////////////////////////////////////
 
 openMenu.addEventListener("click",burgerMenu)
@@ -39,17 +43,8 @@ let cartSquare = (ev) =>{
 cartButton.addEventListener("click",cartSquare)
 
 
-
 //////////////////////////////////////////////
-//////////////////////////////////////////////
-//////////////////////////////////////////////
-
-let checkoutButton = document.getElementById("check-open");
-
-
-
-//////////////////////////////////////////////
-//////////////////////////////////////////////
+/*          PREVIEW MOBILE-TABLET           */
 //////////////////////////////////////////////
 
 let previewContainer        = document.getElementById("previewContainer") 
@@ -130,7 +125,7 @@ buttonRight.addEventListener("click", changeImage)
 
 
 //////////////////////////////////////////////
-//////////////////////////////////////////////
+/*             QUANTITY NUMBER              */
 //////////////////////////////////////////////
 
 let moreButton  = document.getElementById("buttonMore")
@@ -167,7 +162,7 @@ lessButton.addEventListener("click", modifyNumber)
 
 
 //////////////////////////////////////////////
-//////////////////////////////////////////////
+/*                  ADD BUTTON              */
 //////////////////////////////////////////////
 
 let buttonAdd  = document.getElementById("buttonAdd");
@@ -203,7 +198,7 @@ buttonAdd.addEventListener("click", modifyCart)
 
 
 //////////////////////////////////////////////
-//////////////////////////////////////////////
+/                 DELETE CHECKBOX            /
 //////////////////////////////////////////////
 
 let trashButton    = document.getElementById("delete-contain")
@@ -227,5 +222,10 @@ let deleteCheckBoxContain = (ev) =>{
 
 trashButton.addEventListener("click",deleteCheckBoxContain)
 
+//////////////////////////////////////////////
+/            CHECK OUT BUTTON                /
+//////////////////////////////////////////////
+
+let checkoutButton = document.getElementById("check-open");
 
 */
