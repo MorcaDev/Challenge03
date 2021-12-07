@@ -120,49 +120,6 @@ main{
         height: auto;
         margin: 0 auto;
     }
-        .main-description{
-            width: 90%;
-            height: auto;
-            margin: 0 auto;
-        }
-            .main-description h3{
-                margin: 0px;
-                font-size: 1.2rem;
-            }
-            .main-description h2{
-                margin-top: 12px;
-                margin-bottom: 20px;
-                font-size: 2.5rem;
-            }
-            .main-description p{
-                margin-bottom: 24px;
-                line-height: 2rem;
-            }
-        .main-price{
-            width: 90%;
-            margin: 0px auto;
-            display: flex;
-            flex-flow: column wrap;
-            align-items: center;
-            justify-content: flex-start;
-        }
-            .price-currentPrice{ 
-                width: 100%;
-            }
-                .price-currentPrice h3{
-                    font-size: 1.8rem;
-                }
-                .price-currentPrice span{
-                    padding: 2px 6px;
-                    font-size: 1.2rem;
-                }
-            .price-oldPrice{ 
-                width: 100%; 
-                margin-top: 7px;
-            }
-                .price-oldPrice p{
-                    font-size: 1.2rem;
-                }
         .main-adding{
             width: 90%;
             display: flex;

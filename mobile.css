@@ -417,7 +417,10 @@ main{
         position: absolute;
         left: calc(50% - 128px);
         bottom: 2px;
-        font-size: 1rem; text-align: center;  color: var(--darkBlue);    font-weight: var(--bold) 
+        font-size: 1.1rem; 
+        text-align: center;  
+        color: var(--darkBlue);    
+        font-weight: var(--bold) 
     }
     .attribution a { 
         text-align:center;
@@ -441,7 +444,7 @@ main{
     flex-flow: column nowrap;
 
     background-color: var(--whiteBlue);
-    box-shadow: 200px 2px 52px 200px rgba(0,0,0,0.67);
+    box-shadow: 400px 2px 52px 200px rgba(0,0,0,0.67);
     -webkit-box-shadow: 200px 2px 52px 200px rgba(0,0,0,0.67);
     -moz-box-shadow: 200px 2px 52px 200px rgba(0,0,0,0.67);
 
