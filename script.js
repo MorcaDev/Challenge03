@@ -162,6 +162,77 @@ lessButton.addEventListener("click", modifyNumber)
 
 
 //////////////////////////////////////////////
+/*            CHECKBOX CONTAIN              */
+//////////////////////////////////////////////
+let checkBoxContain    = document.getElementById("checkbox-contain")
+
+let fromEmpty = () =>{
+
+    let firstBrother    = 
+    `<div class="contain-info">
+        <img class="info-image" src="./assets/image-product-1-thumbnail.jpg" alt="snickers which you bough"/>
+    
+        <div class="info-container">
+            <p>Autumn Limited Edition...</p>
+
+            <div class="container-row">
+                <h3>$125.00 x <span id="quantityJS">${numberOfNumberBox}</span></h3>
+                <h2 id="priceJS">$${numberOfNumberBox*125}</h2>
+            </div>   
+        </div>
+
+        <button id="delete-contain" class="info-button" alt="to delete your purchase form the cart"></button>
+    </div>`;
+
+    let secondBrother   = 
+    `<div class="contain-button">
+        <button id="check-open">Checkout</button>
+    </div>`;
+
+    checkBoxContain.innerHTML = firstBrother + secondBrother
+
+    let trashIcon   = document.getElementById("delete-contain")
+    trashIcon.addEventListener("click", deleteCheckBox)
+
+}
+
+let deleteCheckBox = () =>{
+    checkBoxContain.innerHTML = `<h3 id="emptyMessage">Your cart is empty</h3>`
+}
+
+let fromFull = () =>{
+
+    let quantity= document.getElementById("quantityJS")    
+    quantity.textContent = numberOfNumberBox
+
+    let price   = document.getElementById("priceJS")
+    price.textContent = `$${numberOfNumberBox * 125}`
+
+}
+
+
+
+//////////////////////////////////////////////
+/*              CHECBOX CONTAIN             */
+//////////////////////////////////////////////
+
+let checkChildren = ( ) =>{
+
+    let collectionChildrenCheckBox = checkBoxContain.children
+    let arrayChildrenCheckBox      = [...collectionChildrenCheckBox]
+    let numberOfChildren        = arrayChildrenCheckBox.length
+    
+    if (numberOfChildren === 1 || numberOfChildren === 0) {
+        fromEmpty()
+
+    }else{
+        fromFull()
+    }
+
+
+}
+
+//////////////////////////////////////////////
 /*                  ADD BUTTON              */
 //////////////////////////////////////////////
 
@@ -170,39 +241,19 @@ let buttonAdd  = document.getElementById("buttonAdd");
 let modifyCart = () =>{
 
     swal("Good choose", "Thanks for your purchase", "success");
-    
+    checkChildren()
 }
 
 buttonAdd.addEventListener("click", modifyCart)
 
+
+
+
 /*
-
-<div class="contain-info">
-    <img class="info-image" src="./assets/image-product-1-thumbnail.jpg" alt="snickers which you bough"/>
-    
-    <div class="info-container">
-        <p>Autumn Limited Edition...</p>
-
-        <div class="container-row">
-            <h3>$125.00 x <span id="quantityJS">3</span></h3>
-            <h2 id="priceJS">$375.00</h2>
-        </div>   
-    </div>
-
-    <button id="delete-contain" class="info-button" alt="to delete your purchase form the cart"></button>
-</div>
-<div class="contain-button">
-    <button id="check-open">Checkout</button>
-</div>
-
-
-
 //////////////////////////////////////////////
 /                 DELETE CHECKBOX            /
 //////////////////////////////////////////////
 
-let trashButton    = document.getElementById("delete-contain")
-let checkContain    = document.getElementById("checkbox-contain")
 
 let deleteCheckBoxContain = (ev) =>{
 
