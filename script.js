@@ -39,31 +39,6 @@ let cartSquare = (ev) =>{
 cartButton.addEventListener("click",cartSquare)
 
 
-//////////////////////////////////////////////
-//////////////////////////////////////////////
-//////////////////////////////////////////////
-
-let trashButton    = document.getElementById("delete-contain")
-let checkContain    = document.getElementById("checkbox-contain")
-
-let deleteCheckBoxContain = (ev) =>{
-
-    swal({
-        title: "Are you sure?",
-        icon: "warning",
-        text : "",
-        buttons: true,
-        dangerMode: true,
-      })
-      .then((willDelete) => {
-        if (willDelete) { cartBox.removeChild(checkContain) } 
-        else { }
-      });
-
-}
-
-trashButton.addEventListener("click",deleteCheckBoxContain)
-
 
 //////////////////////////////////////////////
 //////////////////////////////////////////////
@@ -218,11 +193,39 @@ buttonAdd.addEventListener("click", modifyCart)
             <h2 id="priceJS">$375.00</h2>
         </div>   
     </div>
-    
+
     <button id="delete-contain" class="info-button" alt="to delete your purchase form the cart"></button>
 </div>
 <div class="contain-button">
     <button id="check-open">Checkout</button>
 </div>
+
+
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+let trashButton    = document.getElementById("delete-contain")
+let checkContain    = document.getElementById("checkbox-contain")
+
+let deleteCheckBoxContain = (ev) =>{
+
+    swal({
+        title: "Are you sure?",
+        icon: "warning",
+        text : "",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) { cartBox.removeChild(checkContain) } 
+        else { }
+      });
+
+}
+
+trashButton.addEventListener("click",deleteCheckBoxContain)
+
 
 */
