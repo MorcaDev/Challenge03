@@ -196,10 +196,6 @@ let fromEmpty = () =>{
 
 }
 
-let deleteCheckBox = () =>{
-    checkBoxContain.innerHTML = `<h3 id="emptyMessage">Your cart is empty</h3>`
-}
-
 let fromFull = () =>{
 
     let quantity= document.getElementById("quantityJS")    
@@ -208,6 +204,32 @@ let fromFull = () =>{
     let price   = document.getElementById("priceJS")
     price.textContent = `$${numberOfNumberBox * 125}`
 
+}
+
+
+
+//////////////////////////////////////////////
+/*              DELETE CHECKBOX             */
+//////////////////////////////////////////////
+
+let deleteCheckBox = () =>{
+
+    swal({
+        title: "Are you sure?",
+        icon: "warning",
+        text : "",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) { 
+            checkBoxContain.innerHTML = `<h3 id="emptyMessage">Your cart is empty</h3>` 
+        } 
+        else {
+
+        }
+      });
+    
 }
 
 
@@ -245,38 +267,3 @@ let modifyCart = () =>{
 }
 
 buttonAdd.addEventListener("click", modifyCart)
-
-
-
-
-/*
-//////////////////////////////////////////////
-/                 DELETE CHECKBOX            /
-//////////////////////////////////////////////
-
-
-let deleteCheckBoxContain = (ev) =>{
-
-    swal({
-        title: "Are you sure?",
-        icon: "warning",
-        text : "",
-        buttons: true,
-        dangerMode: true,
-      })
-      .then((willDelete) => {
-        if (willDelete) { cartBox.removeChild(checkContain) } 
-        else { }
-      });
-
-}
-
-trashButton.addEventListener("click",deleteCheckBoxContain)
-
-//////////////////////////////////////////////
-/            CHECK OUT BUTTON                /
-//////////////////////////////////////////////
-
-let checkoutButton = document.getElementById("check-open");
-
-*/
