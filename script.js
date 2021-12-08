@@ -53,7 +53,7 @@ let numberPreviewContainer   = 1;
 let buttonLeft      = document.getElementById("leftButton")
 let buttonRight     = document.getElementById("rightButton")
 
-let changeImage = (ev) =>{
+let changeImageMobile = (ev) =>{
 
     let typeOfClick = ev.target.id
 
@@ -119,8 +119,8 @@ let changeImage = (ev) =>{
 
 }
 
-buttonLeft.addEventListener("click", changeImage)
-buttonRight.addEventListener("click", changeImage)
+buttonLeft.addEventListener("click", changeImageMobile)
+buttonRight.addEventListener("click", changeImageMobile)
 
 
 
@@ -254,6 +254,8 @@ let checkChildren = ( ) =>{
 
 }
 
+
+
 //////////////////////////////////////////////
 /*                  ADD BUTTON              */
 //////////////////////////////////////////////
@@ -267,3 +269,87 @@ let modifyCart = () =>{
 }
 
 buttonAdd.addEventListener("click", modifyCart)
+
+
+
+//////////////////////////////////////////////
+/*              PREVIEW DESKTOP             */
+//////////////////////////////////////////////
+
+let optionsPreview = document.getElementById("optionsPreview");
+
+let changeImageDesktop = (option) =>{
+
+    let lastClass ;
+
+    if (previewContainer.classList.contains("main-preview1")) {
+
+        lastClass = "main-preview1"
+
+    }else if(previewContainer.classList.contains("main-preview2")) {
+
+        lastClass = "main-preview2"
+
+    }else if(previewContainer.classList.contains("main-preview3")) {
+
+        lastClass = "main-preview3"
+
+    }else if(previewContainer.classList.contains("main-preview4")) {
+
+        lastClass = "main-preview4"
+
+    }else{
+        console.log("nothing")
+    }
+
+    switch (option) {
+        case 1:
+            previewContainer.classList.replace(lastClass,"main-preview1")
+            break;
+
+        case 2:
+            previewContainer.classList.replace(lastClass,"main-preview2")
+            break;
+
+        case 3:
+            previewContainer.classList.replace(lastClass,"main-preview3")
+            break;
+
+        case 4:
+            previewContainer.classList.replace(lastClass,"main-preview4")
+            break;
+
+        default:
+            break;
+    } 
+
+}
+
+let identifyOption = (ev) =>{
+
+    let option = ev.target.id 
+
+    switch (option) {
+        case "pv1":
+            changeImageDesktop(1)
+            break;
+
+        case "pv2":
+            changeImageDesktop(2)
+            break;
+
+        case "pv3":
+            changeImageDesktop(3)
+            break;
+
+        case "pv4":
+            changeImageDesktop(4)
+            break;
+    
+        default:
+            break;
+    }
+
+}
+
+optionsPreview.addEventListener("click", identifyOption)

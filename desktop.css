@@ -151,3 +151,26 @@ main{
                 .adding-add button{
                     font-size: 1.4rem;
                 }
+
+
+                
+/*/////////////////////////
+        JS CLASSES
+/////////////////////////*/
+
+.main-preview-1{
+    background: url("./assets/image-product-1-thumbnail.jpg") no-repeat center;
+    background-size: 100% 100%;   
+}
+.main-preview-2{
+    background: url("./assets/image-product-2-thumbnail.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.main-preview-3{
+    background: url("./assets/image-product-3-thumbnail.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.main-preview-4{
+    background: url("./assets/image-product-4-thumbnail.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
