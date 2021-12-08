@@ -1,6 +1,6 @@
 # Challenge03  
 
-![shoes](https://github.com/MorcaDev/Challenge01/blob/master/assets/icon.png)
+![shoes](https://github.com/MorcaDev/Challenge03/blob/master/assets/icon.png)
 
 ### *General Information* 📚:
 ___
@@ -21,7 +21,7 @@ ___
 
 #### *Libraries Used*:
 ___
-[SweetAlert](https://sweetalert.js.org "SweetAlert")
+> [SweetAlert](https://sweetalert.js.org "SweetAlert")
 
 ### *Developer Information* 👋:
 ___
@@ -29,5 +29,5 @@ ___
 
 ### *Link to my watch my challenge* 🚀:
 ___
-[morcaDev](https://morcadev.github.io/Challenge03/ "Challenge03")
+> [morcaDev](https://morcadev.github.io/Challenge03/ "Challenge03")
 
