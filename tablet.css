@@ -20,8 +20,11 @@
 /////////////////////////*/
 
     .main-preview{
-        height: 280px;
+        height: auto;
     }
+        .preview--image{
+            height: 380px;
+        }
     .main-information{
         width: 100%; 
         height: auto;

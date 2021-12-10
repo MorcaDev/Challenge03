@@ -46,9 +46,8 @@ cartButton.addEventListener("click",cartSquare)
 //////////////////////////////////////////////
 /*          PREVIEW MOBILE-TABLET           */
 //////////////////////////////////////////////
-
-let previewContainer        = document.getElementById("previewContainer") 
-let numberPreviewContainer   = 1;
+let previewImg          = document.getElementById("imagePreview")
+let numberPreviewImg    = 1;
 
 let buttonLeft      = document.getElementById("leftButton")
 let buttonRight     = document.getElementById("rightButton")
@@ -59,63 +58,42 @@ let changeImageMobile = (ev) =>{
 
     if (typeOfClick === "leftButton") {
         
-        if(numberPreviewContainer === 1){
-            numberPreviewContainer = 4
+        if(numberPreviewImg === 1){
+            numberPreviewImg = 4
         }else{
-            numberPreviewContainer--
+            numberPreviewImg--
         }
-
-        switch (numberPreviewContainer) {
-            case 1:
-                previewContainer.classList.replace("main-preview2","main-preview1")
-                break;
-    
-            case 2:
-                previewContainer.classList.replace("main-preview3","main-preview2")
-                break;
-    
-            case 3:
-                previewContainer.classList.replace("main-preview4","main-preview3")
-                break;
-    
-            case 4:
-                previewContainer.classList.replace("main-preview1","main-preview4")
-                break;
-    
-            default:
-                break;
-        }   
 
     }else if(typeOfClick === "rightButton"){
         
-        if(numberPreviewContainer === 4){
-            numberPreviewContainer = 1
+        if(numberPreviewImg === 4){
+            numberPreviewImg = 1
         }else{
-            numberPreviewContainer++
+            numberPreviewImg++
         }
-        
-        switch (numberPreviewContainer) {
-            case 1:
-                previewContainer.classList.replace("main-preview4","main-preview1")
-                break;
-    
-            case 2:
-                previewContainer.classList.replace("main-preview1","main-preview2")
-                break;
-    
-            case 3:
-                previewContainer.classList.replace("main-preview2","main-preview3")
-                break;
-    
-            case 4:
-                previewContainer.classList.replace("main-preview3","main-preview4")
-                break;
-    
-            default:
-                break;
-        }   
 
     }else{}
+
+    switch (numberPreviewImg) {
+        case 1:
+            previewImg.src = "./assets/image-product-1.jpg"
+            break;
+
+        case 2:
+            previewImg.src = "./assets/image-product-2.jpg"
+            break;
+
+        case 3:
+            previewImg.src = "./assets/image-product-3.jpg"
+            break;
+
+        case 4:
+            previewImg.src = "./assets/image-product-4.jpg"
+            break;
+
+        default:
+            break;
+    }   
 
 }
 
@@ -235,7 +213,7 @@ let deleteCheckBox = () =>{
 
 
 //////////////////////////////////////////////
-/*              CHECBOX CONTAIN             */
+/*              REVIEW CHECKBOX             */
 //////////////////////////////////////////////
 
 let checkChildren = ( ) =>{
@@ -278,77 +256,30 @@ buttonAdd.addEventListener("click", modifyCart)
 
 let optionsPreview = document.getElementById("optionsPreview");
 
-let changeImageDesktop = (option) =>{
-
-    let lastClass ;
-
-    if (previewContainer.classList.contains("main-preview1")) {
-
-        lastClass = "main-preview1"
-
-    }else if(previewContainer.classList.contains("main-preview2")) {
-
-        lastClass = "main-preview2"
-
-    }else if(previewContainer.classList.contains("main-preview3")) {
-
-        lastClass = "main-preview3"
-
-    }else if(previewContainer.classList.contains("main-preview4")) {
-
-        lastClass = "main-preview4"
-
-    }else{
-        console.log("nothing")
-    }
+let identifyOption = (ev) =>{
+    
+    let option = ev.target.id 
 
     switch (option) {
-        case 1:
-            previewContainer.classList.replace(lastClass,"main-preview1")
+        case "pv1":
+            previewImg.src = "./assets/image-product-1.jpg"
             break;
 
-        case 2:
-            previewContainer.classList.replace(lastClass,"main-preview2")
+        case "pv2":
+            previewImg.src = "./assets/image-product-2.jpg"
             break;
 
-        case 3:
-            previewContainer.classList.replace(lastClass,"main-preview3")
+        case "pv3":
+            previewImg.src = "./assets/image-product-3.jpg"
             break;
 
-        case 4:
-            previewContainer.classList.replace(lastClass,"main-preview4")
+        case "pv4":
+            previewImg.src = "./assets/image-product-4.jpg"
             break;
 
         default:
             break;
     } 
-
-}
-
-let identifyOption = (ev) =>{
-
-    let option = ev.target.id 
-
-    switch (option) {
-        case "pv1":
-            changeImageDesktop(1)
-            break;
-
-        case "pv2":
-            changeImageDesktop(2)
-            break;
-
-        case "pv3":
-            changeImageDesktop(3)
-            break;
-
-        case "pv4":
-            changeImageDesktop(4)
-            break;
-    
-        default:
-            break;
-    }
 
 }
 
