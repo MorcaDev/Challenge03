@@ -479,3 +479,7 @@ main{
             background-color: var(--orange);
             color: var(--paleOrange);
         }
+
+.dissapper{
+    display: none;
+}
