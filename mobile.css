@@ -480,6 +480,6 @@ main{
             color: var(--paleOrange);
         }
 
-.dissapper{
+.main-preview_MI{
     display: none;
-}
+}     

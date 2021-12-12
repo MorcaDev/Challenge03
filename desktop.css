@@ -154,3 +154,64 @@ main{
                 .adding-add button{
                     font-size: 1.4rem;
                 }
+
+
+
+
+
+.main-preview_MI{
+        position: relative;
+        width: 40%;
+        height: 320px;
+        max-width: 340px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        padding: 0px;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .preview--image_MI{
+        display: block;
+        width: 100%;
+        height: 320px;
+        margin: 0px;
+        border-radius: 12px;
+    }
+    .preview--leftB_MI{
+        position: absolute;
+        top: calc(50% - 14px);
+        left: 12px;
+
+        width: 28px;
+        height: 28px;
+        background-color: var(--whiteBlue);
+        background-image: url("./assets/icon-previous.svg");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: 8px 10px;
+        border-radius: 50%;
+        border: none;
+    }
+    .preview--rightB_MI{
+        position: absolute;
+        top: calc(50% - 14px);
+        right: 12px;
+
+        width: 28px;
+        height: 28px;
+        background-color: var(--whiteBlue);
+        background-image: url("./assets/icon-next.svg");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: 8px 10px;
+        border-radius: 50%;
+        border: none;
+    }
+    .main-options_MI{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        display:flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
