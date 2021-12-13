@@ -13,6 +13,12 @@
     width: 28px;
     height: 28px;
 }
+    .user:hover{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: solid 1.5px var(--orange);
+    }
 
 
 /*/////////////////////////

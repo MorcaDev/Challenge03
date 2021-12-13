@@ -87,7 +87,8 @@ header{
                     margin-top: 0px;
                     background: url("./assets/icon-menu.svg") center no-repeat;
                     background-size: 100% 100%;
-                    border: none
+                    border: none;
+                    cursor: pointer;
                 }
             .nav-brand{
                 width: auto;
@@ -115,13 +116,19 @@ header{
                     margin-left: 3px;
                     background: url("./assets/icon-close.svg") center no-repeat;
                     background-size: 100% 100%;
-                    border: none
+                    border: none;
+                    cursor: pointer;
                 }
                 .nav-sections p{
+                    width: 80px;
                     margin: 8px 0px;
                     font-size: 1.25rem;
                     font-weight: var(--bold);
+                    cursor: pointer;
                 }
+                    .nav-sections p:hover a{
+                        color: var(--orange);
+                    }
                 .nav-sections a{
                     text-decoration: none;
                     color: var(--darkBlue);
@@ -139,15 +146,23 @@ header{
                 background: url("./assets/icon-cart.svg") center no-repeat;
                 background-size: 100% 100%;
                 border: none;
+                cursor: pointer;
             }
             .user{
-                width: 19px;
-                height: 19px;
+                width: 22px;
+                height: 22px;
                 margin-left: 16px;
                 background: url("./assets/image-avatar.png") center no-repeat;
                 background-size: 100% 100%;
                 border: none;
+                cursor: pointer;
             }
+                .user:hover{
+                    width: 27px;
+                    height: 27px;
+                    border-radius: 50%;
+                    border: solid 1.5px var(--orange);
+                }
             .checkbox{
                 display: none;
             }
@@ -212,7 +227,12 @@ main{
         background-size: 8px 10px;
         border-radius: 50%;
         border: none;
+
+        cursor: pointer;
     }
+        .preview--leftB:hover{
+            box-shadow: 0px 0px 8px var(--darkBlue);
+        }
     .preview--rightB{
         position: absolute;
         top: calc(50% - 14px);
@@ -227,7 +247,13 @@ main{
         background-size: 8px 10px;
         border-radius: 50%;
         border: none;
+
+        cursor: pointer;
     }
+        .preview--rightB:hover{
+            box-shadow: 0px 0px 8px var(--darkBlue);
+        }
+        
     .main-options{
         display: none;
     }
@@ -327,6 +353,7 @@ main{
                 background: url("./assets/icon-minus.svg") center no-repeat;
                 background-size: 10px 3px;
                 border: none;
+                cursor: pointer;
             }
             .quantity-number{
                 font-size: 1.25rem;
@@ -338,6 +365,7 @@ main{
                 background: url("./assets/icon-plus.svg") center no-repeat;
                 background-size: 11px 10px;
                 border: none;
+                cursor: pointer;
             }
         .adding-add{
             width: 90%;
@@ -352,6 +380,11 @@ main{
                 border: none;
                 border-radius: 10px;
                 background-color: var(--orange);
+
+                cursor: pointer;
+            }
+            .adding-add button:hover{
+                box-shadow: 0px 0px 18px hsl(26, 74%, 54%);
             }
 
 
@@ -403,7 +436,7 @@ main{
     padding: 0px 18px;
     
     position: absolute;
-    top: 70px;
+    top: 75px;
     right: 2.5%;
     z-index: 10;
 
@@ -463,6 +496,7 @@ main{
             border: none;
             background: url("./assets/icon-delete.svg") center no-repeat;
             background-size: 100% 100%;
+            cursor: pointer;
         }
     .contain-button{
         width: 100%;
@@ -477,8 +511,17 @@ main{
             border-radius: 10px;
             background-color: var(--orange);
             color: var(--paleOrange);
+            cursor: pointer;
         }
+            .contain-button button:hover{
+                box-shadow: 0px 0px 10px hsla(26, 74%, 54%, 0.842);
+            }
 
 .invisible{
     display: none;
 }     
+
+.hover:hover{
+    opacity: 0.7;
+    border: solid 2px var(--orange);
+}
