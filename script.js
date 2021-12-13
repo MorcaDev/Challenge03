@@ -1,14 +1,15 @@
 //////////////////////////////////////////////
-/*               BURGER MENU                */
+/*         OPEN/CLOSE BURGER MENU           */
 //////////////////////////////////////////////
-let navMenu      = document.getElementById("nav-sections");
-let navLeft     = document.getElementById("nav-menu_brand");
-let navRight    = document.getElementById("nav-cart_user");
 
-let containerMain   = document.querySelector("main");
+let navMenu  = document.getElementById("nav-sections");
+let navLeft  = document.getElementById("nav-menu_brand");
+let navRight = document.getElementById("nav-cart_user");
 
 let openMenu    = document.getElementById("burger-open");
 let closeMenu   = document.getElementById("burger-close");
+
+let containerMain   = document.querySelector("main");
 
 let burgerMenu = (ev) =>{
 
@@ -17,14 +18,16 @@ let burgerMenu = (ev) =>{
 
 }
 
-
-//////////////////////////////////////////////
-/*              CHECKBOX OPEN               */
-//////////////////////////////////////////////
 openMenu.addEventListener("click",burgerMenu)
 closeMenu.addEventListener("click",burgerMenu)
 
-let cartBox    = document.getElementById("checkbox");
+
+
+//////////////////////////////////////////////
+/*           OPEN/CLOSE  CHECKBOX           */
+//////////////////////////////////////////////
+
+let cartBox     = document.getElementById("checkbox");
 let cartButton  = document.getElementById("cart-open");
 
 let cartSquare = (ev) =>{
@@ -41,6 +44,7 @@ cartButton.addEventListener("click",cartSquare)
 //////////////////////////////////////////////
 /*          PREVIEW MOBILE-TABLET           */
 //////////////////////////////////////////////
+
 let previewImg          = document.getElementById("imagePreview")
 let numberPreviewImg    = 1;
 
@@ -98,7 +102,7 @@ buttonRight.addEventListener("click", changeImageMobile)
 
 
 //////////////////////////////////////////////
-/*             QUANTITY NUMBER              */
+/*           QUANTITY OF PRODUCTS           */
 //////////////////////////////////////////////
 
 let moreButton  = document.getElementById("buttonMore")
@@ -134,9 +138,28 @@ lessButton.addEventListener("click", modifyNumber)
 
 
 
+
+//////////////////////////////////////////////
+/*                  ADD BUTTON              */
+//////////////////////////////////////////////
+
+let buttonAdd  = document.getElementById("buttonAdd");
+
+let modifyCart = () =>{
+
+    swal("Good choose", "Thanks for your purchase", "success");
+    checkChildren()
+}
+
+buttonAdd.addEventListener("click", modifyCart)
+
+
+
+
 //////////////////////////////////////////////
 /*            CHECKBOX CONTAIN              */
 //////////////////////////////////////////////
+
 let checkBoxContain    = document.getElementById("checkbox-contain")
 
 let fromEmpty = () =>{
@@ -184,6 +207,7 @@ let fromFull = () =>{
 //////////////////////////////////////////////
 /*       DELETE/REVIEW CHECKBOX             */
 //////////////////////////////////////////////
+
 let deleteCheckBox = () =>{
 
     swal({
@@ -223,23 +247,9 @@ let checkChildren = ( ) =>{
 
 
 //////////////////////////////////////////////
-/*                  ADD BUTTON              */
-//////////////////////////////////////////////
-let buttonAdd  = document.getElementById("buttonAdd");
-
-let modifyCart = () =>{
-
-    swal("Good choose", "Thanks for your purchase", "success");
-    checkChildren()
-}
-
-buttonAdd.addEventListener("click", modifyCart)
-
-
-
-//////////////////////////////////////////////
 /*              PREVIEW DESKTOP             */
 //////////////////////////////////////////////
+
 let optionsPreview = document.getElementById("optionsPreview");
 
 let identifyOption = (ev) =>{
@@ -276,6 +286,7 @@ optionsPreview.addEventListener("click", identifyOption)
 //////////////////////////////////////////////
 /*              OPEN/CLOSE MODAL            */
 //////////////////////////////////////////////
+
 let previewBox_MI   = document.getElementById("previewContainer_MI")
 let closeButton_MI  = document.getElementById("closeModal_MI")
 
@@ -315,6 +326,7 @@ closeButton_MI.addEventListener("click",closeMI)
 //////////////////////////////////////////////
 /*                OPTIONS MODAL             */
 //////////////////////////////////////////////
+
 let optionsPreview_MI   = document.getElementById("optionsPreview_MI");
 
 let identifyOptionModale = (ev) =>{
