@@ -359,17 +359,16 @@ main{
         ATTRIBUTION
 /////////////////////////*/
 .attribution { 
-        position: absolute;
-        left: calc(50% - 128px);
-        bottom: 2px;
-        font-size: 1.1rem; 
-        text-align: center;  
-        color: var(--darkBlue);    
-        font-weight: var(--bold) 
-    }
-    .attribution a { 
-        text-align:center;
-    }
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    padding-bottom: 5px;
+    font-size: 1.1rem; 
+    text-align: center;  
+    color: var(--darkBlue);    
+    font-weight: var(--bold) 
+}
 
 
 /*/////////////////////////
