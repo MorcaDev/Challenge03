@@ -202,36 +202,6 @@ main{
         margin: 0px;
         border-radius: 12px;
     }
-    .preview--leftB_MI{
-        position: absolute;
-        top: calc(50% -  80px);
-        left: calc(50% - 221px);
-
-        width: 42px;
-        height: 42px;
-        background-color: var(--whiteBlue);
-        background-image: url("./assets/icon-previous.svg");
-        background-repeat: no-repeat;
-        background-position:center;
-        background-size: 8px 10px;
-        border-radius: 50%;
-        border: none;
-    }
-    .preview--rightB_MI{
-        position: absolute;
-        top: calc(50% -  80px);
-        right: calc(50% - 221px);
-
-        width: 42px;
-        height: 42px;
-        background-color: var(--whiteBlue);
-        background-image: url("./assets/icon-next.svg");
-        background-repeat: no-repeat;
-        background-position:center;
-        background-size: 8px 10px;
-        border-radius: 50%;
-        border: none;
-    }
     .main-options_MI{
         width: 400px;
         height: auto;

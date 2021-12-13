@@ -1,7 +1,6 @@
 //////////////////////////////////////////////
 /*               BURGER MENU                */
 //////////////////////////////////////////////
-
 let navMenu      = document.getElementById("nav-sections");
 let navLeft     = document.getElementById("nav-menu_brand");
 let navRight    = document.getElementById("nav-cart_user");
@@ -26,7 +25,6 @@ let burgerMenu = (ev) =>{
 //////////////////////////////////////////////
 /*              CHECKBOX OPEN               */
 //////////////////////////////////////////////
-
 openMenu.addEventListener("click",burgerMenu)
 closeMenu.addEventListener("click",burgerMenu)
 
@@ -41,6 +39,7 @@ let cartSquare = (ev) =>{
 }
 
 cartButton.addEventListener("click",cartSquare)
+
 
 
 //////////////////////////////////////////////
@@ -187,9 +186,8 @@ let fromFull = () =>{
 
 
 //////////////////////////////////////////////
-/*              DELETE CHECKBOX             */
+/*       DELETE/REVIEW CHECKBOX             */
 //////////////////////////////////////////////
-
 let deleteCheckBox = () =>{
 
     swal({
@@ -209,12 +207,6 @@ let deleteCheckBox = () =>{
       });
     
 }
-
-
-
-//////////////////////////////////////////////
-/*              REVIEW CHECKBOX             */
-//////////////////////////////////////////////
 
 let checkChildren = ( ) =>{
 
@@ -237,7 +229,6 @@ let checkChildren = ( ) =>{
 //////////////////////////////////////////////
 /*                  ADD BUTTON              */
 //////////////////////////////////////////////
-
 let buttonAdd  = document.getElementById("buttonAdd");
 
 let modifyCart = () =>{
@@ -253,7 +244,6 @@ buttonAdd.addEventListener("click", modifyCart)
 //////////////////////////////////////////////
 /*              PREVIEW DESKTOP             */
 //////////////////////////////////////////////
-
 let optionsPreview = document.getElementById("optionsPreview");
 
 let identifyOption = (ev) =>{
@@ -284,3 +274,82 @@ let identifyOption = (ev) =>{
 }
 
 optionsPreview.addEventListener("click", identifyOption)
+
+
+
+//////////////////////////////////////////////
+/*              OPEN/CLOSE MODAL            */
+//////////////////////////////////////////////
+let previewBox_MI   = document.getElementById("previewContainer_MI")
+let closeButton_MI  = document.getElementById("closeModal_MI")
+
+let previewImg_MI         = document.getElementById("imagePreview_MI")
+
+let closeMI = (ev) => {
+
+    previewBox_MI.classList.remove("main-preview_MI")
+    previewImg.src = previewImg_MI.src
+
+}
+
+let openMI = () =>{
+    
+    previewBox_MI.classList.add("main-preview_MI")
+    previewImg_MI.src = previewImg.src
+
+}
+
+let verifySize = (ev) =>{
+
+    if (window.innerWidth >= 768) {
+        
+        openMI()
+
+    } else { 
+        console.log("this feature doesn't work in these size device")
+    }
+
+}
+
+previewImg.addEventListener("click",verifySize)
+closeButton_MI.addEventListener("click",closeMI)
+
+
+
+//////////////////////////////////////////////
+/*                OPTIONS MODAL             */
+//////////////////////////////////////////////
+let optionsPreview_MI   = document.getElementById("optionsPreview_MI");
+
+let identifyOptionModale = (ev) =>{
+    
+    let option = ev.target.id 
+
+    switch (option) {
+        case "pv1_MI":
+            previewImg_MI.src = "./assets/image-product-1.jpg"
+            numberPreviewImg_MI = 1;
+            break;
+
+        case "pv2_MI":
+            previewImg_MI.src = "./assets/image-product-2.jpg"
+            numberPreviewImg_MI = 2;
+            break;
+
+        case "pv3_MI":
+            previewImg_MI.src = "./assets/image-product-3.jpg"
+            numberPreviewImg_MI = 3;
+            break;
+
+        case "pv4_MI":
+            previewImg_MI.src = "./assets/image-product-4.jpg"
+            numberPreviewImg_MI = 4;
+            break;
+
+        default:
+            break;
+    } 
+
+}
+
+optionsPreview_MI.addEventListener("click", identifyOptionModale)
