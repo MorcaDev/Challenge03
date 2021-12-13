@@ -15,10 +15,6 @@ let burgerMenu = (ev) =>{
     let cssShowMenu = "show-nav-sections";
     navMenu.classList.toggle(cssShowMenu)
 
-    let cssOpacity = "opacity-containers"; 
-    navLeft.classList.toggle(cssOpacity)
-    navRight.classList.toggle(cssOpacity)
-    containerMain.classList.toggle(cssOpacity)
 }
 
 

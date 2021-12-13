@@ -395,9 +395,6 @@ main{
 
     z-index: 1;
 }
-.opacity-containers{
-    opacity: 0.75;
-}
 
 .show-checkbox{
     position: absolute;
