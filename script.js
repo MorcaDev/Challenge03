@@ -308,19 +308,34 @@ let openMI = () =>{
 
 let verifySize = (ev) =>{
 
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 768 && window.innerHeight >= 564) {
         
         openMI()
 
-    } else { 
-        console.log("this feature doesn't work in these size device")
-    }
+    } else { }
 
 }
 
 previewImg.addEventListener("click",verifySize)
 closeButton_MI.addEventListener("click",closeMI)
 
+
+
+//////////////////////////////////////////////
+/*              RESIZE MODAL                */
+//////////////////////////////////////////////
+
+let verifyResize = ( ) => {
+
+    if (window.innerWidth >= 768 && window.innerHeight >= 564) {
+        
+    } else { 
+        previewBox_MI.classList.remove("main-preview_MI")
+    }
+
+}
+
+window.addEventListener("resize",verifyResize)
 
 
 //////////////////////////////////////////////
